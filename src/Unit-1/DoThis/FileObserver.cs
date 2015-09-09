@@ -26,8 +26,7 @@ namespace WinTail
             _watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
             _watcher.Changed += (sender, e) => { if (e.ChangeType == WatcherChangeTypes.Changed) _tailActor.Tell(new TailActor.FileWrite(e.Name), ActorRefs.NoSender); };
             _watcher.Error +=
-                (sender, e) =>
-                    _tailActor.Tell(new TailActor.FileError(_fileNameOnly, e.GetException().Message), ActorRefs.NoSender);
+                (sender, e) => _tailActor.Tell(new TailActor.FileError(_fileNameOnly, e.GetException().Message), ActorRefs.NoSender);
             _watcher.EnableRaisingEvents = true;
         }
 
