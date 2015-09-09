@@ -1,23 +1,4 @@
-# Akka.NET Bootcamp
-
-![Akka.NET logo](images/akka_net_logo.png)
-
-Welcome to [Akka.NET](http://getakka.net/ "Akka.NET - Distributed actor model in C# and F#") Bootcamp! This is a free, self-directed learning course brought to you by the folks at [Petabridge](http://petabridge.com/ "Petabridge - Akka.NET Training, Consulting, and Support").
-
-[![Join the chat at https://gitter.im/petabridge/akka-bootcamp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/petabridge/akka-bootcamp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-Over the three units of this bootcamp you will learn how to create fully-functional, real-world programs using Akka.NET actors and many other parts of the core Akka.NET framework!
-
-We will start with some basic actors and have you progressively work your way up to larger, more sophisticated examples.
-
-The course is self-directed learning. You can do it at whatever pace you wish. You can [sign up here to have one Akka.NET Bootcamp lesson emailed to you daily](http://learnakka.net/ "Learn Akka.NET with Akka.NET Bootcamp") if you'd like a little help pacing yourself throughout the course.
-
-> NOTE: F# support is in progress (see the [FSharp branch](https://github.com/petabridge/akka-bootcamp/tree/FSharp)). We will happily accept F# pull requests. Feel free to send them in.
-
-## What will you learn?
-In Akka.NET Bootcamp you will learn how to use Akka.NET actors to build reactive, concurrent applications.
-
-You will learn how to build types of applications that may have seemed impossible or really, really hard to make prior to learning Akka.NET. You will walk away from this bootcamp with the confidence to handle bigger and harder problems than ever before!
+# My Akka.NET Bootcamp Fork
 
 ### Unit 1
 In Unit 1, we will learn the fundamentals of how the actor model and Akka.NET work.
