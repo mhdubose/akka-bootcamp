@@ -12,7 +12,7 @@ namespace ChartApp
         private readonly AtomicCounter _seriesCounter = new AtomicCounter(1);
         private IActorRef _chartActor;
         private IActorRef _coordinatorActor;
-        private IDictionary<CounterType, IActorRef> _toggleActors = new Dictionary<CounterType, IActorRef>();
+        private readonly IDictionary<CounterType, IActorRef> _toggleActors = new Dictionary<CounterType, IActorRef>();
 
         public Main()
         {
@@ -38,7 +38,7 @@ namespace ChartApp
 
         private void Main_Load(object sender, EventArgs e)
         {
-            _chartActor = Program.ChartActors.ActorOf(Props.Create(() => new ChartingActor(sysChart)), "charting");
+            _chartActor = Program.ChartActors.ActorOf(Props.Create(() => new ChartingActor(sysChart, btnPause)), "charting");
             _chartActor.Tell(new ChartingActor.InitializeChart(null));
 
             _coordinatorActor =
@@ -73,5 +73,10 @@ namespace ChartApp
         }
 
         #endregion
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            _chartActor.Tell(new ChartingActor.TogglePause());
+        }
     }
 }
